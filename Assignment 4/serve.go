@@ -1,4 +1,7 @@
-//Create the ""surfer page"" and serve it using Go
+//CSCI 130
+//Leeladhar Reddy Munnangi
+//Assignment 1 (Create the ""surfer page"" and serve it using Go)
+
 
 package main
 import (
