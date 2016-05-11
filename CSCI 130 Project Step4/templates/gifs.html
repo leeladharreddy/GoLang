@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<style>
+    <meta charset="UTF-8">
+    <title>Gifs</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+	<style>
 body {
     font-family: "Lucida Sans", Verdana, sans-serif;
 }
@@ -190,76 +192,55 @@ body {
 
 </style>
 </head>
-<body>
 
-	
-<div class="gridcontainer">
+
+
+		<body>
+	<div class="gridcontainer">
     <div class="gridwrapper">
         <div class="gridbox gridheader">
             <div class="header">
                 <h1>CSCI 130 Team Camerota</h1>
             </div></br></br></br></br></br>
 						<div class="navigation">
-  <li><a href="home.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="project.html">Project</a></li>
-  <li><a href="login.html">Login</a></li>
+    <li><a href="#atf">Home</a></li>
+		<li><a href="#btf">About</a></li>
+		<li><a href="#contacts">Project</a></li>
+		{{if .State}}
+			<li><a href="/changepass">Change Password</a></li>
+			<li><a href="/files">Files</a></li>
+			<li><a href="/photos">Gallery</a></li>
+			<li><a href="/gif">Search Gifs</a></li>
+			<li><a href="/logout">Logout</a></li>
+			<li>  Welcome Team Member {{.Name}}</li>
+		{{else}}
+			<li><a href="/login">Login</a></li>
+			<li><a href="/register">Register</a></li>
+		{{end}}
 </div>
 
         </div>
-
-
-        <div class="gridbox gridmenu">
+		<div class="gridbox gridmenu">
             <div class="menuitem">Sarika</div>
             <div class="menuitem">Sindhura</div>
             <div class="menuitem">Yasasvi</div>
             <div class="menuitem">Leeladhar</div>
         </div>
-        <div class="gridbox gridmain ">
-            <div class="main">
 
-<div class="container">
-  <div class="login">
-    <h1>Login</h1>
-    <form method="post" action="">
-      <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
-      <p><input type="password" name="password" value="" placeholder="Password"></p>
-      <p class="remember_me">
-        <label>
-         <label>
-          <input type="checkbox" name="remember_me" id="remember_me">
-          Remember me on this computer
-        </label>
-        </label>
-      </p>
-      <p class="submit"><input type="submit" name="commit" value="Login"></p>
+
+
+		
+		<div class="gridbox gridmain">
+
+
+<div id="atf">
+    <h1>Search for Gifs</h1>
+    <form method="POST" action="/gifs">
+        <input id="term" name="term" placeholder="Enter word" autofocus>
+        <p class="form-field-err"></p>
+        <button>Submit</button>
     </form>
-  </div>
- 
-  <div class="login-help">
-    <p>New User ?<a href="#">Click here to Signup</a>.</p>
-  </div>
-</div>
-
-            </div>
-        </div>
-        <div class="gridbox gridright">
-            <div class="right">
-<h2>What?</h2>
-<p>This webpage is a part of Go Lang Project.</p>
-<h2>Where?</h2>
-<p>In CSCI 130 Computer Science Dept. Fresno State.</p>
-<h2>Why?</h2>
-<p>For getting good grade. </p>
-            </div>
-        </div>
-        <div class="gridbox gridfooter">
-            <div class="footer">
-<p>Resize the browser window to see the content response to the resizing.</p>
-            </div>
-        </div>
-    </div>
 </div>
 </body>
-</html>
 
+</html>
